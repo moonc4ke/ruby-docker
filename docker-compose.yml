@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true # Enables debugging capabilities when attached to this container.
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app:/usr/src/app
